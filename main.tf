@@ -1,16 +1,16 @@
 provider "google" {
-  project = "firstkubernetes-176201"
-  region  = "europe-west2"
-  zone    = "europe-west2-b"
+  project = "teak-formula-319719"
+  region  = "us-central1"
+  zone    = "us-central1-a"
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "terraform-instance"
-  machine_type = "f1-micro"
+  name         = "sm-codefresh-instance"
+  machine_type = "e2-medium"
 
   boot_disk {
     initialize_params {
-      image = "debian-cloud/debian-9"
+      image = "debian-9-stretch-v20210701"
     }
   }
 
