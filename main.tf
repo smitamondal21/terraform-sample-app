@@ -1,11 +1,12 @@
 provider "google" {
-  project = "teak-formula-319719"
-  region  = "us-central1"
-  zone    = "us-central1-a"
+  credentials = file("teak-formula-319719-a3a2de930b88.json")
+  project     = "teak-formula-319719"
+  region      = "us-central1"
+  zone = "us-central1-a"
 }
 
 resource "google_compute_instance" "vm_instance" {
-  name         = "sm-codefresh-instance"
+  name         = "sm-codefresh-inst2"
   machine_type = "e2-medium"
 
   boot_disk {
@@ -18,5 +19,3 @@ resource "google_compute_instance" "vm_instance" {
     network = "default"
   }
 }
-
-
